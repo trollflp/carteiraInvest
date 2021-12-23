@@ -1,0 +1,79 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>CarteiraSafra</name>
+    </assembly>
+    <members>
+        <member name="M:CarteiraSafra.Controllers.AcaoController.GetAsync(CarteiraSafra.Data.AppDbContext)">
+            <summary>
+            Lista ações
+            </summary>        
+            <response code="200">Sucesso</response>
+        </member>
+        <member name="M:CarteiraSafra.Controllers.AcaoController.GetByIdAsync(CarteiraSafra.Data.AppDbContext,System.Int32)">
+            <summary>
+            Detalha uma ação
+            </summary>
+            <param name="id">ID da ação registrada</param>        
+            <response code="200">Ação encontrada</response>
+            <response code="404">Ação não encontrada</response>
+        </member>
+        <member name="M:CarteiraSafra.Controllers.AcaoController.PostAsync(CarteiraSafra.Data.AppDbContext,CarteiraSafra.ViewModels.CreateAcaoViewModel)">
+            <summary>
+            Cria uma nova ação
+            </summary>
+            <param name="model">Enviar Codigo e RazaoSocial</param>
+            <response code="201">Ação criada com sucesso</response>
+            <response code="400">Erro ao registrar a ação</response>
+        </member>
+        <member name="M:CarteiraSafra.Controllers.AcaoController.PutAsync(CarteiraSafra.Data.AppDbContext,CarteiraSafra.ViewModels.CreateAcaoViewModel,System.Int32)">
+            <summary>
+            Altera uma ação
+            </summary>
+            <param name="model">Enviar Codigo e RazaoSocial para alteração</param>
+            <param name="id">ID da ação a ser alterada</param>
+            <response code="200">Informações alteradas com sucesso</response>
+            <response code="404">ID informado não encontrado</response>
+            <response code="400">Erro ao registrar a alteração</response>
+        </member>
+        <member name="M:CarteiraSafra.Controllers.AcaoController.DeleteAsync(CarteiraSafra.Data.AppDbContext,System.Int32)">
+            <summary>
+            Deleta uma ação
+            </summary>
+            <param name="id">Informar o ID da ação a ser apagada</param>
+            <response code="204">Ação deletada com sucesso</response>
+            <response code="400">Erro ao deletar a alteração</response>
+        </member>
+        <member name="M:CarteiraSafra.Controllers.CotacaoController.GetById(CarteiraSafra.Data.AppDbContext,System.String)">
+            <summary>
+            Retorna cotação em tempo real de uma ação
+            </summary>
+            <param name="symbol">Enviar o código/símbolo da ação (Exemplos: ALLK, TSLA, NAKD, PFE..)</param>
+            <response code="200">Sucesso</response>
+            <response code="404">Ação não encontrada ou faltando informações</response>
+            <response code="400">Erro ao buscar a ação</response>
+        </member>
+        <member name="M:CarteiraSafra.Controllers.OperacaoController.PostAsync(CarteiraSafra.Data.AppDbContext,CarteiraSafra.ViewModels.OperarAcaoViewModel)">
+            <summary>
+            Cria uma nova operação
+            </summary>
+            <param name="model">Informar o codigo/simbolo da ação (codigoAcao), a compra (C) ou venda (V) da ação em tipoOperacao e a quantidade (quantidadeOperacao)</param>
+            <response code="201">Operação registrada</response>
+            <response code="400">Erro ao criar a operação</response>
+        </member>
+        <member name="M:CarteiraSafra.Controllers.OperacaoController.GetAsync(CarteiraSafra.Data.AppDbContext)">
+            <summary>
+            Lista o relatório de operações
+            </summary>
+            <response code="200">Sucesso</response>
+        </member>
+        <member name="M:CarteiraSafra.Controllers.OperacaoController.GetByIdAsync(CarteiraSafra.Data.AppDbContext,System.Int32)">
+            <summary>
+            Detalha uma operação
+            </summary>
+            <param name="id">Enviar o ID da operação</param>
+            <response code="200">Sucesso</response>
+            <response code="404">ID não encontrado</response>
+        </member>
+    </members>
+</doc>
